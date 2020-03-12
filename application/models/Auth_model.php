@@ -40,10 +40,4 @@ class Auth_model extends CI_Model
       );
       return $this->db->insert('tbl_user', $data);
     }
-
-    public function login($email, $password)
-    {
-        $query = $this->db->get_where('tbl_user', array('email'=>$email, 'password'=>$password));
-        return $query->row_array();
-    }
 }
